@@ -109,7 +109,7 @@ void ChanceUsed(bool WoF, int Tries)
     {
        std::cout << Losing[i];
     }
-    for (int i = Tries; i < Losing.size(); i++)
+    for (int i = Tries; i < static_cast<int>(Losing.size()); i++)
     {
         std::cout << "*";
     }
@@ -137,7 +137,7 @@ std::string MakeBlanks(std::string Answer)
 // Fill in blanks with correct letters
 std::string FillBlanks(char Letter, std::string Answer, std::string Blanks)
 {
-    for (auto i = 0; i < Answer.size(); i++)
+    for (auto i = 0; i < static_cast<int>(Answer.size()); i++)
     {
         if(Answer[i] == Letter)
         {
